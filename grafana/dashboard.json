@@ -1,0 +1,951 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "target": {
+          "limit": 100,
+          "matchAny": false,
+          "tags": [],
+          "type": "dashboard"
+        },
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 1,
+  "links": [],
+  "liveNow": false,
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "l-B2qVMVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "dark-red",
+                "value": null
+              },
+              {
+                "color": "#EAB839",
+                "value": 3600
+              },
+              {
+                "color": "dark-green",
+                "value": 86400
+              }
+            ]
+          },
+          "unit": "dtdhms"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 5,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "textMode": "value"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_up_total{system=\"voo.furest.be\"}",
+          "legendFormat": "__auto",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Uptime",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "l-B2qVMVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          },
+          "unit": "string"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      "id": 7,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "text": {},
+        "textMode": "name"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_up_total{system=\"voo.furest.be\"}",
+          "legendFormat": "{{version}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Software Version",
+      "transformations": [],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "l-B2qVMVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 12,
+        "y": 0
+      },
+      "id": 9,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^ 50:09:59:f3:e0:3c$/",
+          "values": false
+        },
+        "textMode": "name"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_up_total{system=\"voo.furest.be\"}",
+          "legendFormat": "{{mac_address}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "CM Mac Address",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "l-B2qVMVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 18,
+        "y": 0
+      },
+      "id": 11,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "/^ 00029636602138$/",
+          "values": false
+        },
+        "textMode": "name"
+      },
+      "pluginVersion": "9.5.1",
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_up_total{system=\"voo.furest.be\"}",
+          "legendFormat": "{{serial_number}}",
+          "range": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Serial Number",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "l-B2qVMVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "stepAfter",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dBmV"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezones": [
+          "Europe/Brussels"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_1_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH1",
+          "range": true,
+          "refId": "CH1"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_2_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH2",
+          "range": true,
+          "refId": "CH2"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_3_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH3",
+          "range": true,
+          "refId": "CH3"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_4_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH4",
+          "range": true,
+          "refId": "CH4"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_5_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH5",
+          "range": true,
+          "refId": "CH5"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_6_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH6",
+          "range": true,
+          "refId": "CH6"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_7_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH7",
+          "range": true,
+          "refId": "CH7"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_8_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH8",
+          "range": true,
+          "refId": "CH8"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_9_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH9",
+          "range": true,
+          "refId": "CH9"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_10_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH10",
+          "range": true,
+          "refId": "CH10"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_11_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH11",
+          "range": true,
+          "refId": "CH11"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_12_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH12",
+          "range": true,
+          "refId": "CH12"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_13_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH13",
+          "range": true,
+          "refId": "CH13"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_14_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH14",
+          "range": true,
+          "refId": "CH14"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_15_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH15",
+          "range": true,
+          "refId": "CH15"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_16_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH16",
+          "range": true,
+          "refId": "CH16"
+        }
+      ],
+      "title": "Downstream Power (dBmV)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "l-B2qVMVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "stepAfter",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dB"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 12,
+        "y": 4
+      },
+      "id": 12,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezones": [
+          "Europe/Brussels"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_1_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH1",
+          "range": true,
+          "refId": "CH1"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_2_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH2",
+          "range": true,
+          "refId": "CH2"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_3_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH3",
+          "range": true,
+          "refId": "CH3"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_4_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH4",
+          "range": true,
+          "refId": "CH4"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_5_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH5",
+          "range": true,
+          "refId": "CH5"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_6_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH6",
+          "range": true,
+          "refId": "CH6"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_7_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH7",
+          "range": true,
+          "refId": "CH7"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_8_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH8",
+          "range": true,
+          "refId": "CH8"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_9_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH9",
+          "range": true,
+          "refId": "CH9"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_10_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH10",
+          "range": true,
+          "refId": "CH10"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_11_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH11",
+          "range": true,
+          "refId": "CH11"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_12_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH12",
+          "range": true,
+          "refId": "CH12"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_13_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH13",
+          "range": true,
+          "refId": "CH13"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_14_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH14",
+          "range": true,
+          "refId": "CH14"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_15_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH15",
+          "range": true,
+          "refId": "CH15"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_downstream_channel_16_snr{system=\"voo.furest.be\"}",
+          "legendFormat": "CH16",
+          "range": true,
+          "refId": "CH16"
+        }
+      ],
+      "title": "Downstream SNR (dB)",
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "l-B2qVMVz"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "lineInterpolation": "stepAfter",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "decimals": 2,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": null
+              }
+            ]
+          },
+          "unit": "dBmV"
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 9,
+        "w": 12,
+        "x": 0,
+        "y": 13
+      },
+      "id": 3,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "timezones": [
+          "Europe/Brussels"
+        ],
+        "tooltip": {
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "targets": [
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_upstream_channel_1_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH1",
+          "range": true,
+          "refId": "CH1"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_upstream_channel_2_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH2",
+          "range": true,
+          "refId": "CH2"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_upstream_channel_3_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH3",
+          "range": true,
+          "refId": "CH3"
+        },
+        {
+          "datasource": {
+            "type": "prometheus",
+            "uid": "l-B2qVMVz"
+          },
+          "editorMode": "builder",
+          "expr": "voo_upstream_channel_4_power{system=\"voo.furest.be\"}",
+          "legendFormat": "CH4",
+          "range": true,
+          "refId": "CH4"
+        }
+      ],
+      "title": "Upstream Power (dBmV)",
+      "type": "timeseries"
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 38,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-12h",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "Europe/Brussels",
+  "title": "VOO",
+  "uid": "qyHI64MVk",
+  "version": 25,
+  "weekStart": ""
+}
