@@ -1,0 +1,10 @@
+[Unit]
+Description=Voo Prometheus Exporter
+After=multi-user.target
+[Service]
+Type=simple
+Restart=always
+ExecStart=/usr/bin/python3 /PATH/TO/voo_exporter.py
+[Install]
+WantedBy=multi-user.target
+

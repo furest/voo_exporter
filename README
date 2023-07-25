@@ -1,0 +1,5 @@
+This is a simple hackish script to export the signal levels of a VOO Cable Modem into prometheus.
+
+In order to use it, rename config.example.py to config.py and fill in your CM passwword.
+
+If you want it to start automatically you can use the provided example service file that you place in /etc/systemd/system/voo_exporter.service. Make sure to set the path to your voo_exporter.py file before.
